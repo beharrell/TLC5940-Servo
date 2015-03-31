@@ -27,3 +27,4 @@ struct Configuration
 
     Configuration();
 };
+#endif
