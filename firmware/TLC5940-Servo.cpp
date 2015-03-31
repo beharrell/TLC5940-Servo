@@ -1,5 +1,5 @@
 #include "TLC5940-Servo.h"
-
+#include "Servo-Config.h"
 
 static void InvSetChannel(byte chan, short val);
 static void InitTLC5940_DIO();
@@ -9,46 +9,6 @@ static void ByteOut(byte data);
 
 static bool needsXLAT = true;
 static byte gsData[24];
-
-
-struct ChannelConfig
-{
-    short minAngle;
-    short minuSec;
-    short maxAngle;
-    short maxuSec;
-    short initPosition;
-};
-
-
-struct Configuration
-{
-    ChannelConfig channel[16];
-    
-    void SetChannel(byte chan, short minAngle, short minuSec, short maxAngle, short maxuSec, short initAngle)
-    {
-        channel[chan].minAngle = minAngle;    
-        channel[chan].minuSec = minuSec;
-        channel[chan].maxAngle = maxAngle;
-        channel[chan].maxuSec = maxuSec;
-        channel[chan].initPosition = initAngle;
-    }
-    
-    
-    void SetInitAngle(byte chan, short initAngle)
-    {
-        channel[chan].initPosition = initAngle;
-    }
-
-
-    Configuration()
-    {
-        for (byte i = 0; i < 16; ++i)
-        {
-            SetChannel(i, ANGLE_MIN, USEC_MIN, ANGLE_MAX, USEC_MAX, INIT_ANGLE);
-        }
-    }
-};
 
 // this makes sure that config is initialised with default values  
 static Configuration config;
