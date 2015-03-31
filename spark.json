@@ -1,5 +1,5 @@
 { 
-   "name": "TLC5940Servo", 
+   "name": "TLC5940-Servo", 
    "author": "Mark Beharrell <mark.beharrell@gmail.com>", 
    "license": "MIT", 
    "version": "0.0.1", 
