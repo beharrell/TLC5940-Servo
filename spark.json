@@ -1,7 +1,7 @@
 { 
-2   "name": "TLC5940Servo", 
-3   "author": "Mark Beharrell <mark.beharrell@gmail.com>", 
-4   "license": "MIT", 
-5   "version": "0.0.1", 
-6   "description": "Basic Library to use a TLC5940 to control upto 16 servos" 
-7 } 
+   "name": "TLC5940Servo", 
+   "author": "Mark Beharrell <mark.beharrell@gmail.com>", 
+   "license": "MIT", 
+   "version": "0.0.1", 
+   "description": "Basic Library to use a TLC5940 to control upto 16 servos" 
+ } 
